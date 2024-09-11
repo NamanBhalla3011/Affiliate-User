@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Withdrawal History</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+  <!-- ################ FAVICON -->
+  <!-- <link rel="shortcut icon" sizes="196x196" href="../assets/images/logo.png"> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <!-- ################ ICONS -->
+  <link rel="stylesheet" href="css/material-design-icons/material-design-icons.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css" type="text/css" />
+  <!-- ################ BOOTSTRAP -->
+  <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+  <!-- Bootstrap Datepicker CSS & JS -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+  <!-- ################ CSS -->
+  <link rel="stylesheet" href="css/app.css" type="text/css" />
+  <link rel="stylesheet" href="css/style.css">
+  <!-- ################ FONT -->
+  <link rel="stylesheet" href="css/font.css" type="text/css" />
+</head>
+
+<body>
+  <div class="app" id="app">
+    <!-- ############ LAYOUT START-->
+    <!-- aside -->
+    <div id="aside" class="app-aside box-shadow-z3 modal fade lg nav-expand">
+      <div class="left navside white dk" layout="column">
+        <div class="navbar navbar-md info no-radius box-shadow-z4">
+          <!-- brand -->
+          <a class="navbar-brand">
+            <div ui-include="'../assets/images/logo.white.svg'"></div>
+            <img src="../assets/images/logo.png" alt="." class="hide" />
+            <span class="hidden-folded inline">Logo</span>
+          </a>
+          <!-- / brand -->
+        </div>
+        <!-- Navigation -->
+        <div flex class="hide-scroll">
+          <nav class="scroll">
+            <ul class="nav" ui-nav>
+              <li>
+                <a>
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  <span class="nav-icon">
+                    <img src="images/dashboard.svg" alt="" height="17px">
+                  </span>
+                  <span class="nav-text">Dashboard</span>
+                </a>
+                <ul class="nav-sub">
+                  <li>
+                    <a href="dashboard-performance.html">
+                      <span class="nav-text">Performance</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="dashboard-sales.html">
+                      <span class="nav-text">SupaCash Sales</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a>
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down">
+                    </i>
+                  </span>
+                  <span class="nav-icon">
+                    <img src="images/dashboard.svg" alt="" height="17px">
+                  </span>
+                  <span class="nav-text">Income</span>
+                </a>
+                <ul class="nav-sub">
+                  <li>
+                    <a href="income-total.html">
+                      <span class="nav-text">Total Income</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="income-commission.html">
+                      <span class="nav-text">Total Supacash Commission</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="withdrawal.html">
+                  <span class="nav-icon">
+                    <img src="images/dashboard.svg" alt="" height="17px">
+                  </span>
+                  <span class="nav-text">Withdrawal</span>
+                </a>
+              </li>
+              <li>
+                <a href="supacash.html">
+                  <span class="nav-icon">
+                    <img src="images/dashboard.svg" alt="" height="17px">
+                  </span>
+                  <span class="nav-text">SupaCash</span>
+                </a>
+              </li>
+              <li>
+                <a href="register-players.html">
+                  <span class="nav-icon">
+                    <img src="images/dashboard.svg" alt="" height="17px">
+                  </span>
+                  <span class="nav-text">Register Players</span>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  <span class="nav-icon">
+                    <img src="images/dashboard.svg" alt="" height="17px">
+                  </span>
+                  <span class="nav-text">Reports</span>
+                </a>
+                <ul class="nav-sub">
+                  <li>
+                    <a href="report-topup.html">
+                      <span class="nav-text">Top Up History</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="report-withdrawal.html">
+                      <span class="nav-text">Withdrawal History</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!-- OLD -->
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- / aside -->
+
+    <!-- content -->
+    <div id="content" class="app-content box-shadow-z3" role="main">
+      <div class="app-header info box-shadow-z4 navbar-md">
+        <div class="navbar navbar-toggleable-sm flex-row align-items-center">
+          <!-- Open side - Naviation on mobile -->
+          <a data-toggle="modal" data-target="#aside" class="hidden-lg-up mr-3">
+            <i class="material-icons">&#xe5d2;</i>
+          </a>
+          <!-- / -->
+
+          <!-- navbar collapse -->
+          <div class="d-lg-none d-flex">
+            <!-- brand -->
+            <a class="navbar-brand">
+              <div ui-include="'../assets/images/logo.white.svg'"></div>
+              <img src="../assets/images/logo.png" alt="." class="hide" />
+              <span class="hidden-folded inline">Logo</span>
+            </a>
+            <!-- / brand -->
+          </div>
+          <!-- / navbar collapse -->
+
+          <!-- navbar right -->
+          <ul class="nav navbar-nav flex-row align-items-center ml-auto">
+            <li class="nav-item dropdown">
+              <a href class="nav-link dropdown-toggle text-ellipsis p-0" data-toggle="dropdown">
+                <span class="avatar w-32">
+                  <img src="images/user.png" alt="...">
+                  <i class="on b-white bottom"></i>
+                </span>
+                <span class="hidden-sm-down _500">Naman</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-overlay pull-right p-0">
+                <a class="dropdown-item p-2" href="profile.html">
+                  <span class="nav-icon">
+                    <i class="material-icons">&#xe7fd;</i>
+                  </span>
+                  <span class="nav-text">profile</span></a>
+                <a class="dropdown-item p-2" href="index.html">
+                  <span class="nav-icon">
+                    <i class="material-icons">&#xe8ac;</i>
+                  </span>
+                  <span class="nav-text">Logout</span></a>
+              </div>
+            </li>
+          </ul>
+          <!-- / navbar right -->
+        </div>
+      </div>
+      <div class="app-body" id="view">
+        <!-- ############ PAGE START-->
+        <div class="padding">
+          <div class="box-header row m-0 px-0 pt-0">
+            <div class="col-12 col-sm-4 px-0">
+              <h5 class="m-0 mt-2 mt-sm-0 _500">Withdrawal History</h5>
+            </div>
+            <div class="col-12 col-sm-8 d-flex justify-content-sm-end pt-3 pt-sm-0 px-0">
+              <a href="" class="btn btn-fw info">
+                <i class="fa fa-arrow-down" style="padding-right: 5px"></i> Download PDF
+              </a>
+            </div>
+          </div>
+
+          <div class="col-12 p-0">
+            <div class="box">
+              <div class="box-header">
+                <div class="form-group row m-0">
+                  <div class="col-sm-4 p-0 pr-sm-3">
+                    <input type="text" class="form-control rounded" placeholder="Search by Transaction ID" />
+                  </div>
+                  <div class="col-sm-4 p-0 px-sm-1 py-3 py-sm-0">
+                    <div class="input-group date rounded" id="datepicker1"
+                      style="border: 1px solid rgba(120, 130, 140, 0.2); overflow: hidden;">
+                      <input type="text" class="form-control" placeholder="Select From Date">
+                      <div class="input-group-append calender-icon">
+                        <span class="input-group-text ">
+                          <i class="fa fa-calendar"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 p-0 pl-sm-3">
+                    <div class="input-group date rounded" id="datepicker2"
+                      style="border: 1px solid rgba(120, 130, 140, 0.2); overflow: hidden;">
+                      <input type="text" class="form-control" placeholder="Select To Date">
+                      <div class="input-group-append calender-icon">
+                        <span class="input-group-text ">
+                          <i class="fa fa-calendar"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box-header pt-0 mb-3">
+                <div class="row m-0">
+                  <div class="col-12 d-flex justify-content-sm-end pt-3 pt-sm-0 px-0">
+                    <button class="btn btn-outline b-info text-info" style="margin-right: 10px">
+                      <i class="fa fa-check" style="padding-right: 10px"></i>Apply
+                    </button>
+                    <button class="btn btn-fw danger">
+                      <i class="fa fa-remove" style="padding-right: 5px"></i> Reset
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="row m-0 px-3">
+                <button class=" btn-outline disabled rounded-bottom rounded-top">Total Records: 20</button>
+                <button class=" btn-outline disabled rounded-bottom rounded-top ml-3">Total Amount: R200.00</button>
+              </div>
+              <div class="table-responsive p-0 m-0 px-3">
+                <table class="table table-striped b-t">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Transaction ID</th>
+                      <th>Method</th>
+                      <th>Amount</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>29-08-2024</td>
+                      <td>WASD234ID</td>
+                      <td>Method_Name</td>
+                      <td>R1,000.00</td>
+                      <td class="text-success">Successful</td>
+                    </tr>
+                    <tr>
+                      <td>29-08-2024</td>
+                      <td>WASD234ID</td>
+                      <td>Method_Name</td>
+                      <td>R1,000.00</td>
+                      <td class="text-danger"><a data-toggle="modal" data-dismiss="modal" data-target="#failReason">Failed</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination m-0 pb-3 justify-content-center">
+                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <!-- ############ PAGE END-->
+      </div>
+    </div>
+    <!-- / -->
+<!-- MODAL STARTS-->
+<!-- FAILED -->
+<div class="modal fade" id="failReason" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title d-flex align-items-center" id="exampleModalLabel"><i class="fa  fa-times-circle text-danger mr-2" style="font-size: 26px;"></i>Failure Reason</h5>
+      </div>
+      <div class="modal-body">
+        Reason of Failure will be ####
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn text-white info" aria-label="Close" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MODAL END -->
+    <!-- ############ LAYOUT END-->
+  </div>
+  <!-- jQuery -->
+  <script src="js/salesChart.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/calenderScripts.js"></script>
+  <script src="js/navScript.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>

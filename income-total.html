@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Total Income</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+  <!-- ################ FAVICON -->
+  <!-- <link rel="shortcut icon" sizes="196x196" href="../assets/images/logo.png"> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <!-- ################ ICONS -->
+  <link rel="stylesheet" href="css/material-design-icons/material-design-icons.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css" type="text/css" />
+  <!-- ################ BOOTSTRAP -->
+  <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+  <!-- ################ CSS -->
+  <link rel="stylesheet" href="css/app.css" type="text/css" />
+  <link rel="stylesheet" href="css/style.css">
+  <!-- ################ FONT -->
+  <link rel="stylesheet" href="css/font.css" type="text/css" />
+</head>
+
+<body>
+  <div class="app" id="app">
+    <!-- ############ LAYOUT START-->
+    <!-- aside -->
+    <div id="aside" class="app-aside box-shadow-z3 modal fade lg nav-expand">
+      <div class="left navside white dk" layout="column">
+        <div class="navbar navbar-md info no-radius box-shadow-z4">
+          <!-- brand -->
+          <a class="navbar-brand">
+            <div ui-include="'../assets/images/logo.white.svg'"></div>
+            <img src="../assets/images/logo.png" alt="." class="hide" />
+            <span class="hidden-folded inline">Logo</span>
+          </a>
+          <!-- / brand -->
+        </div>
+        <!-- Navigation -->
+        <div flex class="hide-scroll">
+          <nav class="scroll">
+            <ul class="nav" ui-nav>
+              <li>
+                <a>
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  <span class="nav-icon">
+                    <img src="images/dashboard.svg" alt="" height="17px">
+                  </span>
+                  <span class="nav-text">Dashboard</span>
+                </a>
+                <ul class="nav-sub">
+                  <li>
+                    <a href="dashboard-performance.html">
+                      <span class="nav-text">Performance</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="dashboard-sales.html">
+                      <span class="nav-text">SupaCash Sales</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a>
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down">
+                    </i>
+                  </span>
+                  <span class="nav-icon">
+                    <img src="images/dashboard.svg" alt="" height="17px">
+                  </span>
+                  <span class="nav-text">Income</span>
+                </a>
+                <ul class="nav-sub">
+                  <li>
+                    <a href="income-total.html">
+                      <span class="nav-text">Total Income</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="income-commission.html">
+                      <span class="nav-text">Total Supacash Commission</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="withdrawal.html">
+                  <span class="nav-icon">
+                    <img src="images/dashboard.svg" alt="" height="17px">
+                  </span>
+                  <span class="nav-text">Withdrawal</span>
+                </a>
+              </li>
+              <li>
+                <a href="supacash.html">
+                  <span class="nav-icon">
+                    <img src="images/dashboard.svg" alt="" height="17px">
+                  </span>
+                  <span class="nav-text">SupaCash</span>
+                </a>
+              </li>
+              <li>
+                <a href="register-players.html">
+                  <span class="nav-icon">
+                    <img src="images/dashboard.svg" alt="" height="17px">
+                  </span>
+                  <span class="nav-text">Register Players</span>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <span class="nav-caret">
+                    <i class="fa fa-caret-down"></i>
+                  </span>
+                  <span class="nav-icon">
+                    <img src="images/dashboard.svg" alt="" height="17px">
+                  </span>
+                  <span class="nav-text">Reports</span>
+                </a>
+                <ul class="nav-sub">
+                  <li>
+                    <a href="report-topup.html">
+                      <span class="nav-text">Top Up History</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="report-withdrawal.html">
+                      <span class="nav-text">Withdrawal History</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!-- OLD -->
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- / aside -->
+
+    <!-- content -->
+    <div id="content" class="app-content box-shadow-z3" role="main">
+      <!-- header -->
+      <div class="app-header info box-shadow-z4 navbar-md">
+        <div class="navbar navbar-toggleable-sm flex-row align-items-center">
+          <!-- Open side - Naviation on mobile -->
+          <a data-toggle="modal" data-target="#aside" class="hidden-lg-up mr-3">
+            <i class="material-icons">&#xe5d2;</i>
+          </a>
+          <!-- / -->
+
+          <!-- navbar collapse -->
+          <div class="d-lg-none d-flex">
+            <!-- brand -->
+            <a class="navbar-brand">
+              <div ui-include="'../assets/images/logo.white.svg'"></div>
+              <img src="../assets/images/logo.png" alt="." class="hide" />
+              <span class="hidden-folded inline">Logo</span>
+            </a>
+            <!-- / brand -->
+          </div>
+          <!-- / navbar collapse -->
+
+          <!-- navbar right -->
+          <ul class="nav navbar-nav flex-row align-items-center ml-auto">
+            <li class="nav-item dropdown">
+              <a href class="nav-link dropdown-toggle text-ellipsis p-0" data-toggle="dropdown">
+                <span class="avatar w-32">
+                  <img src="images/user.png" alt="...">
+                  <i class="on b-white bottom"></i>
+                </span>
+                <span class="hidden-sm-down _500">Naman</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-overlay pull-right p-0">
+                <a class="dropdown-item p-2" href="profile.html">
+                  <span class="nav-icon">
+                    <i class="material-icons">&#xe7fd;</i>
+                  </span>
+                  <span class="nav-text">profile</span></a>
+                <a class="dropdown-item p-2" href="index.html">
+                  <span class="nav-icon">
+                    <i class="material-icons">&#xe8ac;</i>
+                  </span>
+                  <span class="nav-text">Logout</span></a>
+              </div>
+            </li>
+          </ul>
+          <!-- / navbar right -->
+        </div>
+      </div>
+
+      <div class="app-body" id="view">
+        <!-- ############ PAGE START-->
+        <div class="padding">
+          <div class="box-header row m-0 px-0 pt-0">
+            <div class="col-12 col-sm-4 px-0">
+              <h5 class="m-0 mt-2 mt-sm-0 _500">Income Overview</h5>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-1 form-control-label">Year</label>
+            <div class="col-sm-3">
+              <select class="form-control c-select">
+                <option>2024</option>
+                <option>2023</option>
+                <option>2022</option>
+                <option>2021</option>
+              </select>
+            </div>
+            <label for="inputEmail3" class="col-sm-1 form-control-label">Month</label>
+            <div class="col-sm-3">
+              <select class="form-control c-select">
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+              </select>
+            </div>
+          </div>
+          <div class="row justify-content-start mt-3">
+            <div class="col-sm-6 col-md-4">
+              <div class="box p-a btn w-100 text-left btn-outline b-accent">
+                <div class="pull-left m-r">
+                  <span class="w-40 warn text-center rounded">
+                    <i class="material-icons">group_added</i>
+                  </span>
+                </div>
+                <div class="clear">
+                  <h4 class="m-0 text-md">
+                    <a>R1,208.00
+                      <span class="text-sm text-success">(+40%)</span></a>
+                  </h4>
+                  <small class="text-muted">Total Income</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="box p-a btn w-100 text-left btn-outline b-warn">
+                <div class="pull-left m-r">
+                  <span class="w-40 accent text-center rounded">
+                    <i class="material-icons">supervisor_account</i>
+                  </span>
+                </div>
+                <div class="clear">
+                  <h4 class="m-0 text-md">
+                    <a>R1,028.00
+                      <span class="text-sm text-success">(+40%)</span></a>
+                  </h4>
+                  <small class="text-muted">Pending Income</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="box p-a btn w-100 text-left btn-outline b-accent">
+                <div class="pull-left m-r">
+                  <span class="w-40 warn text-center rounded">
+                    <i class="material-icons">style </i>
+                  </span>
+                </div>
+                <div class="clear">
+                  <h4 class="m-0 text-md">
+                    <a>R1,900.00
+                      <span class="text-sm text-danger">(-5%)</span></a>
+                  </h4>
+                  <small class="text-muted">Available Income</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="box p-a btn w-100 text-left btn-outline b-warn">
+                <div class="pull-left m-r">
+                  <span class="w-40 accent text-center rounded">
+                    <i class="material-icons">supervisor_account</i>
+                  </span>
+                </div>
+                <div class="clear">
+                  <h4 class="m-0 text-md">
+                    <a>R1,208.00
+                      <span class="text-sm text-success">(+40%)</span></a>
+                  </h4>
+                  <small class="text-muted">Monthly/Yearly Income</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 p-0">
+            <div class="box">
+              <div class="box-header pb-0">
+                <h2>Income Breakdown</h2>
+              </div>
+              <div class="box-body">
+                <form role="form" class="p-0 m-0">
+                  <div class="form-group row">
+                    <label class="col-sm-3 form-control-label">Registration Commission</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" value="R13,572.00" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-3 form-control-label">FTD Commission</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" value="R1,000.00" disabled>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 p-0">
+            <div class="box">
+              <div class="box-header pb-0">
+                <h2>Commission Structure</h2>
+              </div>
+              <div class="box-body">
+                <form role="form" class="p-0 m-0">
+                  <div class="form-group row">
+                    <label class="col-sm-3 form-control-label">FTD Commission</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" value="R13,572.00" disabled>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-3 form-control-label">Registration Commission</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control" value="R1,000.00" disabled>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 p-0">
+            <div class="box">
+              <div class="box-header pb-0">
+                <h2>Income Analysis</h2>
+              </div>
+              <div class="box-body">
+                <canvas id="myBarChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ############ PAGE END-->
+      </div>
+    </div>
+    <!-- / -->
+    <!-- ############ LAYOUT END-->
+  </div>
+  <!-- jQuery -->
+  <script src="js/salesChart.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/navScript.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>

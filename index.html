@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+    <!-- ################ FAVICON -->
+    <!-- <link rel="shortcut icon" sizes="196x196" href="../assets/images/logo.png"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <!-- ################ ICONS -->
+    <link rel="stylesheet" href="css/material-design-icons/material-design-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css" type="text/css" />
+    <!-- ################ BOOTSTRAP -->
+    <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+    <!-- Bootstrap Datepicker CSS & JS -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <!-- ################ CSS -->
+    <link rel="stylesheet" href="css/app.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css">
+    <!-- ################ FONT -->
+    <link rel="stylesheet" href="css/font.css" type="text/css" />
+  </head>
+  <body>
+   <!-- ############ LAYOUT START-->
+  <div class="center-block w-xxl w-auto-xs p-y-md">
+    <div class="navbar">
+      <div class="pull-center">
+        <a class="navbar-brand">
+          <div ui-include="'../assets/images/logo.svg'"></div>
+          <img src="../assets/images/logo.png" alt="." class="hide">
+          <span class="hidden-folded inline">LOGO</span>
+        </a>
+      </div>
+    </div>
+    <div class="p-a-md box-color r box-shadow-z1 text-color m-a">
+      <div class="m-b text-sm">
+        <h6>Affiliate Login</h6>
+      </div>
+      <form name="form">
+        <div class="md-form-group float-label">
+          <input type="email" class="md-input" ng-model="user.email" required>
+          <label>Email</label>
+        </div>
+        <div class="md-form-group float-label">
+          <input type="password" class="md-input" ng-model="user.password" required>
+          <label>Password</label>
+        </div>      
+        
+        <a href="dashboard-performance.html" class="btn info text-white btn-block p-x-md">Log in</a>
+      </form>
+    </div>
+  </div>
+
+<!-- ############ LAYOUT END-->
+  </body>
+</html>
