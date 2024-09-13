@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Total Income</title>
+  <title>SupaCash Commission</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
   <!-- ################ FAVICON -->
   <!-- <link rel="shortcut icon" sizes="196x196" href="../assets/images/logo.png"> -->
@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css" type="text/css" />
   <!-- ################ BOOTSTRAP -->
   <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+  <!-- Bootstrap Datepicker CSS & JS -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
   <!-- ################ CSS -->
   <link rel="stylesheet" href="css/app.css" type="text/css" />
   <link rel="stylesheet" href="css/style.css">
@@ -69,7 +72,7 @@
                     </i>
                   </span>
                   <span class="nav-icon">
-                    <img src="images/income.svg" alt="" height="17px">
+                    <img src="images/dashboard.svg" alt="" height="17px">
                   </span>
                   <span class="nav-text">Income</span>
                 </a>
@@ -87,9 +90,9 @@
                 </ul>
               </li>
               <li>
-                <a href="payout.html">
+                <a href="withdrawal.html">
                   <span class="nav-icon">
-                    <img src="images/payout.svg" alt="" height="17px">
+                    <img src="images/dashboard.svg" alt="" height="17px">
                   </span>
                   <span class="nav-text">Payout</span>
                 </a>
@@ -97,7 +100,7 @@
               <li>
                 <a href="supacash.html">
                   <span class="nav-icon">
-                    <img src="images/voucher.svg" alt="" height="17px">
+                    <img src="images/dashboard.svg" alt="" height="17px">
                   </span>
                   <span class="nav-text">SupaCash</span>
                 </a>
@@ -105,7 +108,7 @@
               <li>
                 <a href="register-players.html">
                   <span class="nav-icon">
-                    <img src="images/user.svg" alt="" height="17px">
+                    <img src="images/dashboard.svg" alt="" height="17px">
                   </span>
                   <span class="nav-text">Register Players</span>
                 </a>
@@ -116,7 +119,7 @@
                     <i class="fa fa-caret-down"></i>
                   </span>
                   <span class="nav-icon">
-                    <img src="images/Reports.svg" alt="" height="17px">
+                    <img src="images/dashboard.svg" alt="" height="17px">
                   </span>
                   <span class="nav-text">Reports</span>
                 </a>
@@ -127,7 +130,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="report-payout.html">
+                    <a href="report-withdrawal.html">
                       <span class="nav-text">Payout History</span>
                     </a>
                   </li>
@@ -142,7 +145,6 @@
 
     <!-- content -->
     <div id="content" class="app-content box-shadow-z3" role="main">
-      <!-- header -->
       <div class="app-header info box-shadow-z4 navbar-md">
         <div class="navbar navbar-toggleable-sm flex-row align-items-center">
           <!-- Open side - Naviation on mobile -->
@@ -208,141 +210,101 @@
           <!-- / navbar right -->
         </div>
       </div>
-
       <div class="app-body" id="view">
         <!-- ############ PAGE START-->
         <div class="padding">
           <div class="box-header row m-0 px-0 pt-0">
-            <div class="col-12 col-sm-6 px-0">
-              <h5 class="m-0 mt-2 mt-sm-0 _500">Income Overview</h5>
+            <div class="col-12 col-sm-4 px-0">
+              <h5 class="m-0 mt-2 mt-sm-0 _500">SupaCash Commission</h5>
             </div>
-            <div class="col-12 col-sm-6 d-flex justify-content-sm-end pt-3 pt-sm-0 px-0">
+            <div class="col-12 col-sm-8 d-flex justify-content-sm-end pt-3 pt-sm-0 px-0">
               <a href="" class="btn btn-fw info">
                 <i class="fa fa-arrow-down" style="padding-right: 5px"></i> Download PDF
               </a>
             </div>
           </div>
-          <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-1 form-control-label">Year</label>
-            <div class="col-sm-3">
-              <select class="form-control c-select">
-                <option>2024</option>
-                <option>2023</option>
-                <option>2022</option>
-                <option>2021</option>
-              </select>
-            </div>
-            <label for="inputEmail3" class="col-sm-1 form-control-label">Month</label>
-            <div class="col-sm-3">
-              <select class="form-control c-select">
-                <option>January</option>
-                <option>February</option>
-                <option>March</option>
-                <option>April</option>
-              </select>
-            </div>
-          </div>
-          <div class="row justify-content-start mt-3">
-            <div class="col-sm-6 col-md-4">
-              <div class="box p-a btn w-100 text-left btn-outline b-accent">
-                <div class="pull-left m-r">
-                  <span class="w-40 warn text-center rounded">
-                    <i class="fa fa-money"></i>
-                  </span>
-                </div>
-                <div class="clear">
-                  <h4 class="m-0 text-md">
-                    <a>R1,208.00</a>
-                  </h4>
-                  <small class="text-muted">Total Income</small>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="box p-a btn w-100 text-left btn-outline b-warn">
-                <div class="pull-left m-r">
-                  <span class="w-40 accent text-center rounded">
-                    <i class="fa fa-money"></i>
-                  </span>
-                </div>
-                <div class="clear">
-                  <h4 class="m-0 text-md">
-                    <a>R1,028.00</a>
-                  </h4>
-                  <small class="text-muted">Pending Income</small>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="box p-a btn w-100 text-left btn-outline b-accent">
-                <div class="pull-left m-r">
-                  <span class="w-40 warn text-center rounded">
-                    <i class="fa fa-money"></i>
-                  </span>
-                </div>
-                <div class="clear">
-                  <h4 class="m-0 text-md">
-                    <a>R1,900.00</a>
-                  </h4>
-                  <small class="text-muted">Available Income</small>
-                </div>
-              </div>
-            </div>
-          </div>
+
           <div class="col-12 p-0">
             <div class="box">
-              <div class="box-header pb-0">
-                <h2>Income Breakdown</h2>
-              </div>
-              <div class="box-body">
-                <div class="table-responsive p-0 m-0">
-                  <table class="table table-striped b-t">
-                    <thead>
-                      <tr>
-                        <th>Date</th>
-                        <th>Registerations</th>
-                        <th>FTDs</th>
-                        <th>Registration Commission</th>
-                        <th>FTD Commission</th>
-                        <th>Registrations Income</th>
-                        <th>FTDs Income </th>
-                        <th>Total Income</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>29-01-2024</td>
-                        <td>20</td>
-                        <td>10</td>
-                        <td>R10.00</td>
-                        <td>R20.00</td>
-                        <td>R100.00</td>
-                        <td>R200.00</td>
-                        <td>R300.00</td>
-                      </tr>
-                      <tr>
-                        <td>29-01-2024</td>
-                        <td>20</td>
-                        <td>10</td>
-                        <td>R10.00</td>
-                        <td>R20.00</td>
-                        <td>R100.00</td>
-                        <td>R200.00</td>
-                        <td>R300.00</td>
-                      </tr>
-                    </tbody>
-                  </table>
+              <div class="box-header">
+                <div class="form-group row m-0">
+                  <div class="col-sm-4 p-0 pr-sm-3">
+                    <input type="text" class="form-control rounded" placeholder="Search by Voucher ID" />
+                  </div>
+                  <div class="col-sm-4 p-0 px-sm-1 py-3 py-sm-0">
+                    <div class="input-group date rounded" id="datepicker1"
+                      style="border: 1px solid rgba(120, 130, 140, 0.2); overflow: hidden;">
+                      <input type="text" class="form-control" placeholder="Select From Date">
+                      <div class="input-group-append calender-icon">
+                        <span class="input-group-text ">
+                          <i class="fa fa-calendar"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 p-0 pl-sm-3">
+                    <div class="input-group date rounded" id="datepicker2"
+                      style="border: 1px solid rgba(120, 130, 140, 0.2); overflow: hidden;">
+                      <input type="text" class="form-control" placeholder="Select To Date">
+                      <div class="input-group-append calender-icon">
+                        <span class="input-group-text ">
+                          <i class="fa fa-calendar"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <nav aria-label="Page navigation example">
-                  <ul class="pagination m-0 pb-3 justify-content-center">
-                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                  </ul>
-                </nav>
               </div>
+              <div class="box-header pt-0 mb-3">
+                <div class="row m-0">
+                  <div class="col-12 d-flex justify-content-sm-end pt-3 pt-sm-0 px-0">
+                    <button class="btn btn-outline b-info text-info" style="margin-right: 10px">
+                      <i class="fa fa-check" style="padding-right: 10px"></i>Apply
+                    </button>
+                    <button class="btn btn-fw danger">
+                      <i class="fa fa-remove" style="padding-right: 5px"></i> Reset
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="row m-0 px-3 mt-3">
+                <button class=" btn-outline disabled rounded-bottom rounded-top">Total Sales: 20</button>
+                <button class=" btn-outline disabled rounded-bottom rounded-top ml-3">Total Commission Earned: R200.00</button>
+                <button class=" btn-outline disabled rounded-bottom rounded-top ml-3">Commission Structure: 2% per
+                  voucher</button>
+              </div>
+              <div class="table-responsive p-0 m-0 px-3">
+                <table class="table table-striped b-t">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Voucher ID</th>
+                      <th>Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>29-08-2024</td>
+                      <td>WASD234ID</td>
+                      <td>R1,000.00</td>
+                    </tr>
+                    <tr>
+                      <td>29-08-2024</td>
+                      <td>WASD234ID</td>
+                      <td>R1,000.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination m-0 pb-3 justify-content-center">
+                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+              </nav>
             </div>
           </div>
         </div>
@@ -351,14 +313,17 @@
       </div>
     </div>
     <!-- / -->
+
     <!-- ############ LAYOUT END-->
   </div>
   <!-- jQuery -->
   <script src="js/salesChart.js"></script>
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/calenderScripts.js"></script>
   <script src="js/navScript.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
   <!-- endbuild -->
 </body>
 

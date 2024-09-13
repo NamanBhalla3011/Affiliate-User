@@ -69,7 +69,7 @@
                     </i>
                   </span>
                   <span class="nav-icon">
-                    <img src="images/dashboard.svg" alt="" height="17px">
+                    <img src="images/income.svg" alt="" height="17px">
                   </span>
                   <span class="nav-text">Income</span>
                 </a>
@@ -81,23 +81,23 @@
                   </li>
                   <li>
                     <a href="income-commission.html">
-                      <span class="nav-text">Total Supacash Commission</span>
+                      <span class="nav-text">Supacash Commission</span>
                     </a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="withdrawal.html">
+                <a href="payout.html">
                   <span class="nav-icon">
-                    <img src="images/dashboard.svg" alt="" height="17px">
+                    <img src="images/payout.svg" alt="" height="17px">
                   </span>
-                  <span class="nav-text">Withdrawal</span>
+                  <span class="nav-text">Payout</span>
                 </a>
               </li>
               <li>
                 <a href="supacash.html">
                   <span class="nav-icon">
-                    <img src="images/dashboard.svg" alt="" height="17px">
+                    <img src="images/voucher.svg" alt="" height="17px">
                   </span>
                   <span class="nav-text">SupaCash</span>
                 </a>
@@ -105,7 +105,7 @@
               <li>
                 <a href="register-players.html">
                   <span class="nav-icon">
-                    <img src="images/dashboard.svg" alt="" height="17px">
+                    <img src="images/user.svg" alt="" height="17px">
                   </span>
                   <span class="nav-text">Register Players</span>
                 </a>
@@ -116,7 +116,7 @@
                     <i class="fa fa-caret-down"></i>
                   </span>
                   <span class="nav-icon">
-                    <img src="images/dashboard.svg" alt="" height="17px">
+                    <img src="images/Reports.svg" alt="" height="17px">
                   </span>
                   <span class="nav-text">Reports</span>
                 </a>
@@ -127,8 +127,8 @@
                     </a>
                   </li>
                   <li>
-                    <a href="report-withdrawal.html">
-                      <span class="nav-text">Withdrawal History</span>
+                    <a href="report-payout.html">
+                      <span class="nav-text">Payout History</span>
                     </a>
                   </li>
                 </ul>
@@ -165,6 +165,25 @@
 
           <!-- navbar right -->
           <ul class="nav navbar-nav flex-row align-items-center ml-auto">
+            <div class="row m-0 white align-items-center p-1 mr-2 mr-sm-3">
+              <div class="col-4 p-0">
+                <i class="material-icons text-info" style="font-size: 25px;">&#xe850;</i>
+              </div>
+              <div class="col-8 p-0 text-info ">
+                <p style="font-size: 10px;" class="p-0 m-0">Top Up</p>
+                <p style="font-size: 10px;" class="p-0 m-0">R10,000.00</p>
+              </div>
+            </div>
+            <div class="row m-0 white align-items-center p-1 mr-2 mr-sm-3">
+              <div class="col-4 p-0">
+                <i class="material-icons text-success" style="font-size: 25px;">&#xe850;</i>
+              </div>
+              <div class="col-8 p-0 text-success ">
+                <p style="font-size: 10px;" class="p-0 m-0">Commission</p>
+                <p style="font-size: 10px;" class="p-0 m-0">R10,000.00</p>
+              </div>
+            </div>
+           
             <li class="nav-item dropdown">
               <a href class="nav-link dropdown-toggle text-ellipsis p-0" data-toggle="dropdown">
                 <span class="avatar w-32">
@@ -201,7 +220,7 @@
             </div>
             <div class="col-12 col-sm-8 d-flex justify-content-sm-end pt-3 pt-sm-0 px-0">
               <div class="btn-group">
-                <button type="button" class="btn btn-outline b-info active p-2 px-4" id="">
+                <button type="button" class="btn btn-outline b-info p-2 px-sm-4" id="">
                   Year
                 </button>
                 <button type="button" class="btn btn-outline b-info p-2 px-sm-4">
@@ -216,12 +235,12 @@
               </div>
             </div>
           </div>
-          <div class="row justify-content-center mt-3">
+          <div class="row justify-content-start mt-3">
             <div class="col-sm-6 col-md-4">
               <div class="box p-a btn w-100 text-left btn-outline b-accent">
                 <div class="pull-left m-r">
                   <span class="w-40 warn text-center rounded">
-                    <i class="material-icons">group_added</i>
+                    <i class="material-icons">style</i>
                   </span>
                 </div>
                 <div class="clear">
@@ -237,7 +256,7 @@
               <div class="box p-a btn w-100 text-left btn-outline b-warn">
                 <div class="pull-left m-r">
                   <span class="w-40 accent text-center rounded">
-                    <i class="material-icons">supervisor_account</i>
+                    <i class="fa fa-money"></i>
                   </span>
                 </div>
                 <div class="clear">
@@ -253,7 +272,7 @@
               <div class="box p-a btn w-100 text-left btn-outline b-accent">
                 <div class="pull-left m-r">
                   <span class="w-40 warn text-center rounded">
-                    <i class="material-icons">style </i>
+                    <i class="fa fa-money"> </i>
                   </span>
                 </div>
                 <div class="clear">
@@ -269,7 +288,7 @@
               <div class="box p-a btn w-100 text-left btn-outline b-warn">
                 <div class="pull-left m-r">
                   <span class="w-40 accent text-center rounded">
-                    <i class="material-icons">supervisor_account</i>
+                    <i class="fa fa-money"></i>
                   </span>
                 </div>
                 <div class="clear">
@@ -295,6 +314,16 @@
                   </h4>
                   <small class="text-muted">Total Voucher Redeemed</small>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 p-0">
+            <div class="box">
+              <div class="box-header pb-0">
+                <h2>Income Analysis</h2>
+              </div>
+              <div class="box-body">
+                <canvas id="myChart"></canvas>
               </div>
             </div>
           </div>

@@ -1,3 +1,45 @@
+const xValues = ["Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",];
+const yValues = [1000, 2000, 3000, 4000, 4000, 4000, 1000,5000];
+
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [
+      {
+        fill: false,
+        lineTension: 0,
+        borderColor: "#fcc100", // Line color (yellow)
+        borderWidth: 4, // Line thickness (adjust as needed)
+        data: yValues,
+        pointBackgroundColor: "#fff", // Circle color (yellow)
+        pointBorderColor: "#fcc100", // Circle outline color (white)
+        pointBorderWidth: 4, // Circle outline thickness
+        pointRadius: 6, // Circle size
+      },
+    ],
+  },
+  options: {
+    legend: { display: false },
+    scales: {
+      yAxes: [{ ticks: { min: 1000, max: 5000 } }],
+      xAxes: [{ ticks: { min: 50, max: 150 } }],
+    },
+  },
+});
+
+
 const ctx = document.getElementById("myBarChart").getContext("2d");
 const myBarChart = new Chart(ctx, {
   type: "bar",
